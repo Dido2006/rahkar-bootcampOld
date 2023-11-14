@@ -7,13 +7,15 @@
 </head>
 <body>
     <script>
-     var count=0,total=0
-for(let i=1;i*21<300;i++)
+     var count,total=0,temp=0
+for(count=1;temp+21<300;++count)
             {
-            total+=(i*21);
-            count++;
-            console.log(i*21)
+            temp=count*21
+            total+=(temp);
+            console.log(temp)
             }
+    //the latest count cuse the for loop end so it's not smaller than max 300 and shoud not conuted.
+            count--;
     console.log(count,total)
     </script>
 </body>
