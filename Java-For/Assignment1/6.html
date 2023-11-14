@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        <!-- Greatest common divisor   -->
+        function gcd(max,min)
+        {
+            <!-- xchange min, max to be like there name -->
+            if(min>max)
+            max , min= min , max;
+        // this is a dirty Work But i did it to enter the loop without getting cut by condiction max%cd!=0 
+            var cd=null ;
+        while(max%cd!=0)
+        {
+            cd=max%min
+            <!-- max=min;min=cd -->
+            max=min
+            min=cd
+        }
+        return cd;
+    }
+    console.log(gcd(25,35))
+    </script>
+ </body>
+</html>
