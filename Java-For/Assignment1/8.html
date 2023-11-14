@@ -8,12 +8,11 @@
 <body>
     <script>
      var count=0,total=0
-for(let i=1;i<300;i++)
-    if(i%3==0&&i%7==0)
+for(let i=1;i*21<300;i++)
             {
-            total+=(i);
+            total+=(i*21);
             count++;
-            console.log(i)
+            console.log(i*21)
             }
     console.log(count,total)
     </script>
