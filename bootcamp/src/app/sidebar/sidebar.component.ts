@@ -10,4 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarComponent {
 
+  ngOnDestroy(){
+console.log("killed");
+
+
+  }
 }
