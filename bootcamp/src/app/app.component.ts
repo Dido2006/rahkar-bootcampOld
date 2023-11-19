@@ -22,6 +22,23 @@ constructor()
 {setTimeout(() => {this.appear=false
   
 }, 2000);}
+todolist : any[] =[ {
+  title : '1' ,
+  Finished: false 
+},
+{
+  title : '2' ,
+  Finished: false 
+},
+{
+  title : '3' ,
+  Finished: false 
+}
+
+
+
+];
+
   title = 'bootcamp';
     Clickcounter : number = 0;
     ontype(e:any ){
@@ -35,7 +52,33 @@ constructor()
     console.log("bye");
     // @output out1(e:any)
     
+  }
+  datamine={
+      title:'' ,
+      Finished: false 
+    } ;
+  onchangegetdata(event : any)   {
+    var data={
+      title:event.target.value ,
+      Finished: false 
+    }
+    this.datamine=data;
+    console.log(data);
+    
     
   }
-    
+  onclick()
+  {
+    this.todolist.push(this.datamine)
+
+  }
+  onRemove()
+  {
+    this.todolist.pop()
+  }
+  ondid()
+  {
+    this.todolist[1].Finished=true;
+   console.log(this.todolist[1]);
+  }
 }

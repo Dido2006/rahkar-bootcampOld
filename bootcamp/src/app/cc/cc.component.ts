@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input , Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,13 +9,22 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cc.component.scss'
 })
 export class CcComponent {
-  @output() Name:string= new EventEmitter();
+  @Output() LastName = new EventEmitter();
 
-  FName : string ="Mohsen"
-  LName : string ="Bigdeli"
-  ClickHandler(e:any)
-  {
-  
+  // FName : string ="Mohsen"
+   LName : string ='';
+  // ClickHandler(e:any)
+  // {
+  // this.Name.emit(this.FName)
+  // }
+  onChangeFName(event :any){
+    console.log(event.target.value);
   }
-
+  onChangeLName(event :any){
+    this.LName=event.target.value;
+  }
+  ClickHandler()
+  {
+    this.LastName.emit(this.LName)
+  }
 }
