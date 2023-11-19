@@ -22,23 +22,13 @@ constructor()
 {setTimeout(() => {this.appear=false
   
 }, 2000);}
-todolist : any[] =[ {
-  title : '1' ,
-  Finished: false 
-},
-{
-  title : '2' ,
-  Finished: false 
-},
-{
-  title : '3' ,
-  Finished: false 
-}
-
-
-
-];
-
+todolist : any[] =[{}];
+//  [ {
+//   title : 'test' ,
+//   Finished: false ,
+//   id:0
+// }
+// ];
   title = 'bootcamp';
     Clickcounter : number = 0;
     ontype(e:any ){
@@ -47,30 +37,23 @@ todolist : any[] =[ {
      onClick(e:any){
       this.Clickcounter=this.Clickcounter+1;
      }
-    // @input in1(e:any) 
-    ngOnDestroy(){
-    console.log("bye");
-    // @output out1(e:any)
-    
-  }
-  datamine={
-      title:'' ,
-      Finished: false 
-    } ;
-  onchangegetdata(event : any)   {
-    var data={
-      title:event.target.value ,
-      Finished: false 
-    }
-    this.datamine=data;
-    console.log(data);
-    
-    
-  }
-  onclick()
-  {
-    this.todolist.push(this.datamine)
-
+     onchangegetdata(event : any)   {
+       let data={
+         title:event.target.value ,
+         Finished: false 
+        }
+        console.log(data);
+       this.todolist.push(data);
+       console.log(this.todolist);
+       
+      }
+      onclick()
+      {
+      var datamine={
+        title:'' ,
+        Finished: false 
+      } ;
+      this.todolist.push(datamine)
   }
   onRemove()
   {
@@ -78,7 +61,7 @@ todolist : any[] =[ {
   }
   ondid()
   {
-    this.todolist[1].Finished=true;
+   this.todolist[1].Finished=true;
    console.log(this.todolist[1]);
   }
 }
