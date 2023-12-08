@@ -7,8 +7,9 @@
     </head>
     <body>
         <script>
+            function  nextdayCalender(inputDay)
+            {
             let day=1
-            inputDay=124
             year=1402
             nextDay=inputDay+1
             if(nextDay<=31) //Farvardin
@@ -66,7 +67,8 @@
                 year=1403
             }
             console.log(`${year}/${month}/${day}`);
- 
+        }
+       nextdayCalender(124) //call Founction
       </script>
 </body>
 </html>
