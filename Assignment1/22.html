@@ -23,7 +23,7 @@
                             } else {
                               newDD=dd+1  //simple current month next day
                             } 
-               }else if(mm > 12 || (mm = 12 && dd < 29) ) // is it a month last day for first six month wit **** 30 Days peer month*****
+               }else if(mm > 12 || (mm ==12 && dd < 29) ) // is it a month last day for first six month wit **** 30 Days peer month*****
                {
                             if(dd==30)
                             {             // is it a month last day for first six month wit **** 30 Days peer month*****
@@ -34,7 +34,7 @@
                             } 
 
                }else{
-                    if(dd==29 && ((yyyy-1403)/4==0 ) ) //if curreny date is leap year day before last day 1403 is leap year leap year repeate period is 4 year
+                    if(dd==29 && ((yyyy-1403)/5==0 ) ) //if curreny date is leap year day before last day 1403 is leap year leap year repeate period is 5 year
                     {
                        newDD=30 //leap year last day
                        newMM=12
@@ -49,8 +49,10 @@
                 console.log(`${newYY}/${newMM}/${newDD}`);
                }
 
-        nextdayCalender(1402,11,1)
-        nextdayCalender(1402,12,29)
+        nextdayCalender(1370,12,29)
+        // nextdayCalender(1370,12,29)
+        // nextdayCalender(1402,11,30)
+        // nextdayCalender(1402,12,29)
 //          console.log(`${year}/${month}/${day}`);
        
    //   nextdayCalender(1376,1,5) //call Founction
